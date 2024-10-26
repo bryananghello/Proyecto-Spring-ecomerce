@@ -11,7 +11,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 @Service
 public class UploadFileService {
-	private String folder ="image//";
+	private String folder ="images//";
 	
 	//es para subir la imagen y convertirla en bytes
 	public String saveImage(MultipartFile file) throws IOException {
@@ -26,9 +26,9 @@ public class UploadFileService {
 		return "default.jpg";
 	}
 
-	public void deleteImage(String nombre) {
+	public void deleteImage(String nommbre) {
 		String ruta ="images//";
-		File file = new File(ruta+nombre); 
+		File file = new File(ruta+nommbre); 
 		file.delete();
 	}
 }
