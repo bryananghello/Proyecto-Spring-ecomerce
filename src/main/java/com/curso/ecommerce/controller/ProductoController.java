@@ -1,15 +1,16 @@
-package com.curso.ecomerce.controller;
+package com.curso.ecommerce.controller;
 
 import org.slf4j.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.curso.ecomerce.model.Producto;
-import com.curso.ecomerce.model.Usuario;
-import com.curso.ecomerce.service.ProductoService;
+import com.curso.ecommerce.model.Producto;
+import com.curso.ecommerce.model.Usuario;
+import com.curso.ecommerce.service.ProductoService;
 
 @Controller
 @RequestMapping("/productos")
@@ -23,7 +24,8 @@ public class ProductoController {
 			
 	
 	@GetMapping("")
-	public String show() {
+	public String show(Model model) {
+		model.addAttribute("productos",productoService.findAll());
 		return "productos/show";
 	}
 

@@ -8,10 +8,10 @@
 		<version>3.3.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.curso.ecomerce</groupId>
-	<artifactId>Spring-ecomerce</artifactId>
+	<groupId>com.curso.ecommerce</groupId>
+	<artifactId>Spring-ecommerce</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Spring-ecomerce</name>
+	<name>Spring-ecommerce</name>
 	<description>Curso de Soring Proyecto ecomerce</description>
 	<url/>
 	<licenses>

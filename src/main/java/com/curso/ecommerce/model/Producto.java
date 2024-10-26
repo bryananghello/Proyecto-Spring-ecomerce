@@ -1,4 +1,4 @@
-package com.curso.ecomerce.model;
+package com.curso.ecommerce.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -13,7 +13,7 @@ public class Producto {
 	@Id
 	@GeneratedValue(strategy= GenerationType.IDENTITY)
 	private  Integer id;
-	private String nommbre;
+	private String nombre;
 	private String descripcion;
 	private String imagen;
 	private String precio;
@@ -23,16 +23,15 @@ public class Producto {
 	
 	@ManyToOne
 	private Usuario usuario;
-	
 	public Producto() {
 	}
 
 
-	public Producto(Integer id, String nommbre, String descripcion, String imagen, String precio, String cantidad,
+	public Producto(Integer id, String nombre, String descripcion, String imagen, String precio, String cantidad,
 			Usuario usuario) {
 		super();
 		this.id = id;
-		this.nommbre = nommbre;
+		this.nombre = nombre;
 		this.descripcion = descripcion;
 		this.imagen = imagen;
 		this.precio = precio;
@@ -50,11 +49,11 @@ public class Producto {
 	}
 
 	public String getNommbre() {
-		return nommbre;
+		return nombre;
 	}
 
 	public void setNommbre(String nommbre) {
-		this.nommbre = nommbre;
+		this.nombre = nommbre;
 	}
 
 	public String getDescripcion() {
@@ -100,7 +99,7 @@ public class Producto {
 
 	@Override
 	public String toString() {
-		return "Producto [id=" + id + ", nommbre=" + nommbre + ", descripcion=" + descripcion + ", imagen=" + imagen
+		return "Producto [id=" + id + ", nommbre=" + nombre + ", descripcion=" + descripcion + ", imagen=" + imagen
 				+ ", precio=" + precio + ", cantidad=" + cantidad + "]";
 	}
 	

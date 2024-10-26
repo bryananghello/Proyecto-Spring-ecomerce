@@ -1,4 +1,4 @@
-package com.curso.ecomerce.model;
+package com.curso.ecommerce.model;
 
 import java.util.Date;
 

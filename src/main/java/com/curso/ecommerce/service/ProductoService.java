@@ -1,8 +1,10 @@
-package com.curso.ecomerce.service;
+package com.curso.ecommerce.service;
 
 import java.util.Optional;
 
-import com.curso.ecomerce.model.Producto;
+import com.curso.ecommerce.model.Producto;
+
+import java.util.List;
 
 public interface ProductoService {
 
@@ -10,4 +12,5 @@ public interface ProductoService {
 	public Optional<Producto> get(Integer id);
 	public void update(Producto producto);
 	public void  delete (Integer id);
+	public List<Producto> findAll();
 }

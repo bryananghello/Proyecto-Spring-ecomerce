@@ -1,12 +1,13 @@
-package com.curso.ecomerce.service;
+package com.curso.ecommerce.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.curso.ecomerce.model.Producto;
-import com.curso.ecomerce.repository.ProductoRepository;
+import com.curso.ecommerce.model.Producto;
+import com.curso.ecommerce.repository.ProductoRepository;
 
 @Service
 public class ProductoServiceImpl  implements ProductoService{
@@ -38,6 +39,12 @@ public class ProductoServiceImpl  implements ProductoService{
 		// TODO Auto-generated method stub
 		productorepository.deleteById(id);
 		
+	}
+
+	@Override
+	public List<Producto> findAll() {
+		
+		return productorepository.findAll();
 	}
 
 }

@@ -1,4 +1,4 @@
-package com.curso.ecomerce.model;
+package com.curso.ecommerce.model;
 
 import java.util.List;
 
@@ -15,7 +15,7 @@ public class Usuario {
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private  Integer id;
-	private String nommbre;
+	private String nombre;
 	private String username;
 	private String email;
 	private String direccion;
@@ -32,11 +32,11 @@ public class Usuario {
 
 	
 
-	public Usuario(Integer id, String nommbre, String username, String email, String direccion, String tipo,
+	public Usuario(Integer id, String nombre, String username, String email, String direccion, String tipo,
 			String password) {
 		super();
 		this.id = id;
-		this.nommbre = nommbre;
+		this.nombre = nombre;
 		this.username = username;
 		this.email = email;
 		this.direccion = direccion;
@@ -57,12 +57,12 @@ public class Usuario {
 
 
 	public String getNommbre() {
-		return nommbre;
+		return nombre;
 	}
 
 
-	public void setNommbre(String nommbre) {
-		this.nommbre = nommbre;
+	public void setNommbre(String nombre) {
+		this.nombre = nombre;
 	}
 
 
@@ -131,7 +131,7 @@ public class Usuario {
 
 	@Override
 	public String toString() {
-		return "Usuario [id=" + id + ", nommbre=" + nommbre + ", username=" + username + ", email=" + email
+		return "Usuario [id=" + id + ", nommbre=" + nombre + ", username=" + username + ", email=" + email
 				+ ", direccion=" + direccion + ", tipo=" + tipo + ", password=" + password + "]";
 	}
 	
